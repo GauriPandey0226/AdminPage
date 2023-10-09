@@ -1,0 +1,104 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the user management section */
+#admin-controls {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Page heading style */
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+/* Form style */
+form {
+    margin-top: 20px;
+}
+
+/* Form labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input fields and select box */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Submit button style */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* User list style */
+#user-list {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+/* Individual user entry style */
+#user-list li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Role-specific styling */
+#user-list li[data-role="binman"] {
+    background-color: #ffe6e6; /* Red background for binmen */
+}
+
+#user-list li[data-role="customer"] {
+    background-color: #e6f7ff; /* Blue background for customers */
+}
+
+#user-list li[data-role="admin"] {
+    background-color: #d9f0e6; /* Green background for admins */
+}
+/* Add a background image to the body */
+body {
+    background-image: url('https://wallpapers.com/images/hd/minimalist-aesthetic-background-ir1thqicpx3877ys.jpg'); /* Replace 'your-image-url.jpg' with the actual image file path */
+    background-size: cover; /* Cover the entire viewport with the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Keep the background image fixed as the page scrolls */
+}

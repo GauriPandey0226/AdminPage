@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management</title>
+    <!-- Link to FullCalendar CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.min.css" rel="stylesheet">
+    <!-- Link to FullCalendar JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.min.js"></script>
+    <!-- Link to Custom CSS -->
+    <link rel="stylesheet" href="attendance.css">
+    <!-- Additional CSS styles for enhanced appearance -->
+    <style>
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #156184;
+            color: #ffffffe2;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #f3f4f3f2;
+        }
+
+        /* Main */
+        main {
+            margin: 20px;
+        }
+
+        /* Attendance Section */
+        .attendance-section {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* Calendar View */
+        .calendar-view {
+            margin-top: 20px;
+        }
+
+        /* Table */
+        .attendance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .attendance-table th,
+        .attendance-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .attendance-table th {
+            background-color: #156184;
+            color: #fff;
+        }
+
+        /* Leave Management */
+        .leave-management {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label,
+        textarea,
+        input[type="text"],
+        input[type="date"],
+        button[type="submit"] {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button[type="submit"] {
+            background-color: #156184;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #156184;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Attendance Management</h1>
+    </header>
+
+    <main>
+        <section class="attendance-section">
+            <h2>Locality Attendance</h2>
+
+            <!-- Calendar View -->
+            <div class="calendar-view">
+                <!-- Calendar content goes here (You can use a JavaScript library for calendar implementation) -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var calendarEl = document.querySelector('.calendar-view');
+                
+                        var calendar = new FullCalendar.Calendar(calendarEl, {
+                            initialView: 'dayGridMonth', // You can change the initial view as needed
+                            events: [
+                                // Define your calendar events here (e.g., leave requests)
+                                {
+                                    title: 'Leave Request',
+                                    start: '2023-10-10',
+                                    end: '2023-10-12',
+                                    backgroundColor: '#FF5733', // Customize the event color
+                                    borderColor: '#FF5733',
+                                },
+                                // Add more events as needed
+                            ],
+                        });
+                
+                        calendar.render();
+                    });
+                </script>
+            </div>
+
+            <!-- Tabular Format -->
+            <table class="attendance-table">
+                <!-- Table headers -->
+                <thead>
+                    <tr>
+                        <th>Binman ID</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <!-- Table data (attendance records) should be generated dynamically using server-side logic -->
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>abhijeet singh</td>
+                        <td>2023-10-05</td>
+                        <td>Present</td>
+                    </tr>
+                    <!-- Add more attendance records here -->
+                    <!-- Table data (attendance records) should be generated dynamically using server-side logic -->
+
+    <tr>
+        <td>001</td>
+        <td>Ram chaurasia </td>
+        <td>2023-10-05</td>
+        <td>Present</td>
+    </tr>
+    <tr>
+        <td>002</td>
+        <td>Amit kumar</td>
+        <td>2023-10-05</td>
+        <td>Present</td>
+    </tr>
+    <tr>
+        <td>003</td>
+        <td>Devendra Pandey</td>
+        <td>2023-10-05</td>
+        <td>Absent</td>
+    </tr>
+    <tr>
+        <td>004</td>
+        <td>Sunny yadav</td>
+        <td>2023-10-05</td>
+        <td>Present</td>
+    </tr>
+    <tr>
+        <td>005</td>
+        <td>Vikas Prajapati</td>
+        <td>2023-10-05</td>
+        <td>Present</td>
+    </tr>
+
+
+                </tbody>
+            </table>
+        </section>
+
+        <section class="leave-management">
+            <h2>Leave Management</h2>
+
+            <!-- Leave Request Form -->
+            <form id="leave-request-form">
+                <label for="binman-id">Binman ID:</label>
+                <input type="text" id="binman-id" name="binman-id" required>
+
+                <label for="leave-date">Leave Date:</label>
+                <input type="date" id="leave-date" name="leave-date" required>
+
+                <label for="reason">Reason:</label>
+                <textarea id="reason" name="reason" required></textarea>
+
+                <button type="submit">Submit Leave Request</button>
+            </form>
+
+            <!-- Leave Requests List (Generated dynamically using server-side logic) -->
+            <div class="leave-requests-list">
+                <!-- Leave requests will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 BINNERINSIGHT</p>
+    </footer>
+</body>
+</html>

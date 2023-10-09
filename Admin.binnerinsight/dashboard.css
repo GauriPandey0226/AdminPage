@@ -1,0 +1,58 @@
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page heading style */
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+/* Container for the dashboard sections */
+#key-metrics,
+#live-tracking-map,
+#collection-progress {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Section heading style */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Real-time data metrics style */
+#real-time-data p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#real-time-data span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Live tracking map style */
+#map {
+    height: 400px; /* Adjust the map height as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Trash collection progress chart style */
+#progress-chart {
+    height: 300px; /* Adjust the chart height as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

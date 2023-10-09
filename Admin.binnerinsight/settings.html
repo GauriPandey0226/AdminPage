@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include necessary CSS and JavaScript libraries -->
+    <link rel="stylesheet" href="settings.css">
+    
+</head>
+<body style="background-image: url('https://wallpapers.com/images/hd/minimalist-aesthetic-background-ir1thqicpx3877ys.jpg');"></body>
+<body>
+    <h1>System Settings</h1>
+
+    <!-- System Settings Form -->
+    <div id="settings-form">
+        <h2>Configure System Settings</h2>
+        <form id="system-settings-form">
+            <label for="geofencing-radius">Geofencing Radius (meters):</label>
+            <input type="number" id="geofencing-radius" name="geofencing-radius" required>
+            
+            <label for="notification-preference">Notification Preferences:</label>
+            <select id="notification-preference" name="notification-preference" required>
+                <option value="email">Email</option>
+                <option value="sms">SMS</option>
+                <option value="app">App Notifications</option>
+            </select>
+            
+            <button type="submit">Save Settings</button>
+        </form>
+    </div>
+
+    <!-- Database Management Section -->
+    <div id="database-management">
+        <h2>Database Management</h2>
+        <p>Admins can update and maintain the system database here.</p>
+        <button id="backup-database-button">Backup Database</button>
+        <button id="restore-database-button">Restore Database</button>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

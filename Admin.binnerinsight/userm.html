@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include necessary CSS and JavaScript libraries -->
+    <link rel="stylesheet" href="user.css">
+    <!-- Include your own CSS and JavaScript files -->
+</head>
+<body>
+    <h1>User Management</h1>
+
+    <!-- Admin controls to manage users -->
+    <div id="admin-controls">
+        <!-- Form for adding a new user -->
+        <form id="add-user-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="binman">Binman</option>
+                <option value="customer">Customer</option>
+                <option value="admin">Admin</option>
+            </select>
+            <button type="submit">Add User</button>
+        </form>
+
+        <!-- User list with options to edit and disable users -->
+        <ul id="user-list">
+            <!-- User entries will be dynamically generated here -->
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript code to handle user management
+        // Implement AJAX calls to interact with the backend
+        // Implement logic for role-based access control
+        src="userma.js"
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include necessary CSS and JavaScript libraries -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body style="background-image: url('https://wallpapers.com/images/hd/minimalist-aesthetic-background-ir1thqicpx3877ys.jpg');"></body>
+<body>
+    <h1>Dashboard</h1>
+
+    <!-- Key Metrics Section -->
+    <div id="key-metrics">
+        <h2>Key Metrics</h2>
+        <!-- Display real-time data here -->
+        <div id="real-time-data">
+            <p>Total Bins Collected: <span id="total-bins">0</span></p>
+            <p>Active Binmen: <span id="active-binmen">0</span></p>
+            <!-- Add more metrics as needed -->
+        </div>
+    </div>
+
+    <!-- Live Tracking Map -->
+    <div id="live-tracking-map">
+        <h2>Live Tracking</h2>
+        <!-- Display a map with live tracking of binmen's locations here -->
+       
+        <!-- You will need a mapping library (e.g., Leaflet or Google Maps) for this section -->
+        <div id="map"></div>
+    </div>
+
+    <!-- Trash Collection Progress -->
+    <div id="collection-progress">
+        <h2>Trash Collection Progress</h2>
+        <!-- Display graphical representation of collection progress here -->
+        <!-- You can use charting libraries like Chart.js or D3.js for this section -->
+        <div id="progress-chart"></div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
